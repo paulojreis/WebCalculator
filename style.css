@@ -1,0 +1,167 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: calc(8px + 3vmin);
+    font-weight: 200;
+    color: #363c44;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 100%;
+    background-image: linear-gradient(to bottom, #BBED8F, #21A725);
+}
+
+.Calculator {
+    width: 60vmin;
+    height: 80vmin;
+    min-height: 320px;
+    max-height: 500px;
+    min-width: 240px;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+}
+
+.Calculator_display {
+    display: flex;
+    align-items: center;
+    height: 25%;
+    flex-basis: 25%;
+    justify-content: flex-end;
+    text-align: right;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, #36475f, #2c394f);
+    color: #FFF;
+    font-size: 1.5em;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.Calculator_inputArea {
+    display: flex;
+    height: 75%;
+    flex-flow: column wrap;
+    align-content: stretch;
+}
+
+.Calculator_button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: 0;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    background-color: #FFF;
+    flex-basis: 20%;
+    transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+}
+
+.Calculator_button:focus {
+    outline: none;  
+}
+
+.Calculator_button:active,
+.Calculator_button-active {
+    outline: none;
+    transform: scale(1.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.Calculator_button[value="e"] {
+    background-color: #E2EFE2;
+    color: #239422;
+    order: 1;
+}
+
+.Calculator_button[value="7"] {
+    order: 2
+}
+
+.Calculator_button[value="4"] {
+    order: 3
+}
+
+.Calculator_button[value="1"] {
+    order: 4
+}
+
+.Calculator_button[value="0"] {
+    order: 5;
+    border-bottom-left-radius: 10px;
+}
+
+.Calculator_button[value="*"] {
+    background-color: #E2EFE2;
+    color: #239422;
+    order: 6;
+}
+
+.Calculator_button[value="8"] {
+    order: 7;
+}
+
+.Calculator_button[value="5"] {
+    order: 8;
+}
+
+.Calculator_button[value="2"] {
+    order: 9;
+}
+
+.Calculator_button[value="."] {
+    order: 10;
+}
+
+.Calculator_button[value="/"] {
+    background-color: #E2EFE2;
+    color: #239422;
+    order: 11;
+}
+
+.Calculator_button[value="9"] {
+    order: 12;
+}
+
+.Calculator_button[value="6"] {
+    order: 13;
+}
+
+.Calculator_button[value="3"] {
+    order: 14;
+}
+
+.Calculator_button[value="c"] {
+    color: #A2A9B3;
+    order: 15;
+}
+
+.Calculator_button[value="-"] {
+    background-color: #E2EFE2;
+    color: #239422;
+    order: 16;
+}
+
+.Calculator_button[value="+"] {
+    background-color: #E2EFE2;
+    color: #239422;
+    order: 17;
+    flex-basis: 40%;
+}
+
+.Calculator_button[value="="] {
+    background-color: #98A5B7;
+    color: #FFF;
+    order: 18;
+    flex-basis: 40%;
+    border-bottom-right-radius: 10px;
+}
