@@ -49,6 +49,7 @@ body {
 }
 
 .Calculator_button {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
