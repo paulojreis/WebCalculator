@@ -11,8 +11,13 @@
     var inputAreaEl = document.querySelector('.Calculator_inputArea'),
         displayEl = document.querySelector('.Calculator_display');
 
-    inputAreaEl.addEventListener('click', handleButtonPress);
-    inputAreaEl.addEventListener('touchend', handleButtonPress);
+
+    if ('ontouchend' in document) {
+        inputAreaEl.addEventListener('touchend', handleButtonPress);
+    } else {
+        inputAreaEl.addEventListener('click', handleButtonPress);
+    }
+
     document.addEventListener('keypress', handleKeyPress);
 
     renderDisplay();
